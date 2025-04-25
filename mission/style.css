@@ -1,0 +1,11 @@
+/* Styling for BYUI Mission Statement*/
+.content 
+    { 
+        display: grid;
+        font-family: 'Times New Roman', Times, serif;
+    }
+h1 
+    {
+        text-align: center;
+    
+    }
