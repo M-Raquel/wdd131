@@ -14,10 +14,10 @@ body
         border-color: lightslategray;
         border-width: 2px;
         max-width: 600px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
     }
 h1 
     {
@@ -28,7 +28,7 @@ h2
         color: #006EB6;
         text-align: center;
         border-bottom: 1px;
-
+        height: 300px;
     }
 p 
     {
