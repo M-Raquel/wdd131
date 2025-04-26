@@ -54,5 +54,5 @@ ul
 footer 
     { 
         height: 150px;
-        align-self: center;
+        text-align: center;
     }
