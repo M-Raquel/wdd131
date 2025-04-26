@@ -25,6 +25,10 @@ header
     text-align: center;
     border-bottom: 2px gray;
     }
+h1 {
+    letter-spacing: 5px;
+    font-size: 22px;
+}
 h2
     {
         color: #006EB6;
@@ -51,10 +55,10 @@ ul
     {
         line-height: 1.5;
         list-style-type: decimal;
-
     }
 footer 
     { 
+        margin-top: 20px;
         height: 150px;
         text-align: center;
     }
