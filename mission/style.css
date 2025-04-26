@@ -11,13 +11,13 @@ body
     {
         margin: 50px auto;
         border: 2px;
-        border-color: lightslategray;
+        border-color: gray;
         border-width: 2px;
         max-width: 600px;
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
 header 
@@ -33,12 +33,12 @@ h2
     {
         color: #006EB6;
         letter-spacing: 5px;
-        height: 100px;
         font-size: 18px;
     }
 main 
     {
         margin: 5px;
+        margin-top: 100px;
         height: auto;
     }
 p 
