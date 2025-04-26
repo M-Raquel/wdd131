@@ -10,7 +10,7 @@ body
 .content
     {
         margin: 50px auto;
-        border: 1px;
+        border: 2px;
         border-color: lightslategray;
         border-width: 2px;
         max-width: 600px;
@@ -27,8 +27,8 @@ h2
     {
         color: #006EB6;
         text-align: center;
-        border-bottom: 1px;
-        height: 300px;
+        border-bottom: 1px lightslategray;
+        height: 100px;
     }
 main 
     {
@@ -51,7 +51,7 @@ ul
         list-style-type: decimal;
 
     }
-img 
+footer 
     { 
         height: 150px;
         align-self: center;
