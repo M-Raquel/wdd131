@@ -30,6 +30,11 @@ h2
         border-bottom: 1px;
         height: 300px;
     }
+main 
+    {
+        margin: 5px;
+        height: auto;
+    }
 p 
     {
         text-align: left;
