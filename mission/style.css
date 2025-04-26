@@ -27,7 +27,7 @@ h2
     {
         color: #006EB6;
         text-align: center;
-        border-bottom: 1px lightslategray;
+        border-bottom: 2px lightslategray;
         height: 100px;
     }
 main 
@@ -56,3 +56,6 @@ footer
         height: 150px;
         text-align: center;
     }
+img {
+    height: 150px;
+}
