@@ -27,6 +27,8 @@ h2
     {
         color: #006EB6;
         text-align: center;
+        border-bottom: 1px;
+
     }
 p 
     {
@@ -42,5 +44,5 @@ img
     { 
         width: 150px;
         height: auto;
-
+        align-self: center;
     }
