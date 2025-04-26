@@ -23,11 +23,13 @@ body
 header 
     {
     text-align: center;
-    border-bottom: 2px gray;
+    border-bottom: 3px solid grey; 
+    padding: 10px
+
     }
 h1 {
     letter-spacing: 5px;
-    font-size: 22px;
+    font-size: 30px;
 }
 h2
     {
