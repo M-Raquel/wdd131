@@ -19,15 +19,16 @@ body
         padding-left: 150px;
         padding-right: 150px;
     }
-h1 
+
+header 
     {
-        text-align: center;
+    text-align: center;
+    border-bottom: 2px lightslategray;
     }
 h2
     {
         color: #006EB6;
-        text-align: center;
-        border-bottom: 2px lightslategray;
+        letter-spacing: 5px;
         height: 100px;
     }
 main 
@@ -56,6 +57,7 @@ footer
         height: 150px;
         text-align: center;
     }
-img {
+img 
+    {
     height: 150px;
-}
+    }
