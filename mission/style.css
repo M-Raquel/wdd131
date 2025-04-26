@@ -36,9 +36,15 @@ p
         line-height: 1.5;
         letter-spacing: 1px;
     }
+.italics
+    {
+        font-style: italic;
+    }
 ul 
     {
         line-height: 1.5;
+        list-style-type: decimal;
+
     }
 img 
     { 
