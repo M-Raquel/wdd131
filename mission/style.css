@@ -1,11 +1,13 @@
 /* Styling for BYUI Mission Statement*/
 body 
     { 
-        display: grid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Times New Roman', Times, serif;
         font-size: 20px;
         margin: 50px auto;
-        border: 5px lightslategray;
+        border: lightslategray;
         border-width: 2px;
         max-width: 600px;
 
@@ -30,6 +32,6 @@ ul
     }
 img 
     { 
-        width: 300px;
+        width: 150px;
         height: auto;
     }
