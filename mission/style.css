@@ -10,7 +10,7 @@ body
 .content
     {
         margin: 50px auto;
-        border: 2px;
+        border: 2px solid;
         border-color: gray;
         border-width: 2px;
         max-width: 600px;
