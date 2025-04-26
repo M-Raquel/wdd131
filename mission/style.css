@@ -6,6 +6,8 @@ body
         font-size: 20px;
         margin: 50px auto;
         border: 5px lightslategray;
+        max-width: 600px;
+
     }
 h1 
     {
@@ -19,4 +21,9 @@ h2
 p 
     {
         text-align: left;
+        letter-spacing: 1px;
+    }
+ul 
+    {
+        line-height: 1.5;
     }
