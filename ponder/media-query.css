@@ -12,6 +12,7 @@ header, main, footer {
 header {
     background-color: black;
     color: white;
+    display: none; /* how to hide certain elements at phone view and show on laptops.*/
 }
 section {
     padding: 1rem;
@@ -35,6 +36,9 @@ main {
 @media screen and (min-width: 700px) {
     main{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    header  {
+        display: block;
     }
 }
 @media screen and (min-width: 900px) {
