@@ -29,6 +29,9 @@ a {
 a:visited {
     color: var(--text-light);
 }
+h2 {
+    padding: 20px;
+}
 h1 {
     color: white;
     padding: 20px;
