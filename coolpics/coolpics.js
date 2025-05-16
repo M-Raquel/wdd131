@@ -27,6 +27,7 @@ function galleryclicked() {
 
     let src = clickedImage.getAttribute("src");
     let alt = clickedImage.getAttribute("alt");
+    //Swap image with larger one
     const largerImage = src.split('-')[0] + '-full.jpeg';
 
     // Shows a modal with the same image inside of it. 
