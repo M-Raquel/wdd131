@@ -1,0 +1,105 @@
+/* CSS for Book Blog */
+/* CSS HEX */
+:root {
+  --lavender-blush: #eee5e9ff;
+  --bistre: #341c1cff;
+  --ucla-blue: #2374abff;
+  --bittersweet: #f26157ff;
+  --ice-blue: #97efe9ff;
+  --primary-font: 'Verdana', sans-serif;
+  --Book-Title: 'Luminari', serif;
+  --secondary-font: 'Helvetica', sans-serif;
+}
+
+/* Heading CSS */
+.skiptocontent a {
+    position: absolute;
+    top:-50px;
+}
+.skiptocontent:focus {
+    top: 50px;
+    padding: 30px;
+    background-color: var(--bittersweet);
+    color: var(--bistre);
+    display: block;
+    
+}
+nav {
+    border-top: solid 1px var(--bistre);
+    border-bottom: solid 1px var(--bistre);
+    justify-content: end;
+    justify-items: end;
+    border-color: var(--bistre);
+    background-color: var(--lavender-blush);
+}
+nav > ul{
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    font-size: 1.1rem;
+    max-width: 90%;
+    padding: 20px;
+    margin: 10px;
+}
+a {
+    text-decoration: none;
+    color: var(--bistre);
+}
+h1 {
+    font-family: var(--secondary-font);
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+    color: var(--bistre);
+}
+
+/* Main CSS */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+h2 {
+    font-family: var(--Book-Title);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--ucla-blue);
+    text-align: left;
+}
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: var(--primary-font);
+    font-size: .9rem;
+}
+.book img {
+    border-radius: 10px;
+    text-align: right;
+    max-width: fit-content;
+    height: auto;
+    padding-left: 40px;
+
+}
+.filter {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    font-size: .9rem;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Footer CSS */
+
+/* Media Query */
+@media screen and (max-width: 600px) 
+    {
+    article {
+      grid-template-columns: 1fr;
+    }
+    nav {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+}
