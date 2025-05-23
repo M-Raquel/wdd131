@@ -16,7 +16,7 @@
     position: absolute;
     top:-50px;
 }
-.skiptocontent:focus {
+.skiptocontent a:focus {
     top: 50px;
     padding: 30px;
     background-color: var(--bittersweet);
