@@ -41,7 +41,7 @@ const articles = [
 
 console.log(articles[1].title);
 
-const container = document.getElementById('container');
+const container = document.getElementById('maincontent');
 
 articles.forEach(function(item) {
 	let book = document.createElement('article');
