@@ -17,7 +17,7 @@
     top:-50px;
 }
 .skiptocontent a:focus {
-    top: 50px;
+    top: 16px;
     padding: 30px;
     background-color: var(--bittersweet);
     color: var(--bistre);
@@ -57,46 +57,68 @@ h1 {
 /* Main CSS */
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
+    padding: 30px;
 }
 h2 {
     font-family: var(--Book-Title);
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--ucla-blue);
     text-align: left;
 }
 article {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 15px;
     font-family: var(--primary-font);
     font-size: .9rem;
 }
+.description {
+    justify-items: right;
+    padding-right: 20px;
+}
+.highlight {
+    color: var(--bittersweet);
+    font-style: oblique;
+}
+.date {
+    font-size: 1rem;
+}
+.book {
+    border-color: var(--bistre);
+    border-left: solid 1px;
+    padding: 10px;
+}
 .book img {
+    display: block;
+    margin: auto;
     border-radius: 10px;
     text-align: right;
     max-width: fit-content;
     height: auto;
-    padding-left: 40px;
 
 }
 .filter {
-    display: grid;
     justify-content: center;
     justify-items: center;
     font-size: .9rem;
     padding: 20px;
-    margin: 0 auto;
+    margin: 0;
+    border: solid 1px;
+    border-color: var(--bistre);
 }
 
 /* Footer CSS */
 
 /* Media Query */
-@media screen and (max-width: 600px) 
+@media screen and (max-width: 755px) 
     {
     article {
       grid-template-columns: 1fr;
+      padding: 0;
     }
     nav {
       grid-template-columns: 1fr;
