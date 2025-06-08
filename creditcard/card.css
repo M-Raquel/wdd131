@@ -1,0 +1,120 @@
+/* Css for Card program */
+main {
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: medium;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+#creditcardform
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    position: relative;
+    width: 700px;
+    height: 500px;
+    justify-items: center;
+}
+
+/* CSS for Front Card Overall */
+#cardfront {
+    /* General CSS styling and placement inside form */
+    background-color: lightslategray;
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* CSS for Inside Cardfront */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 10px;
+    gap: 5px;
+}
+.total {
+    grid-column: 1;
+    grid-row: 1;
+}
+.card-number {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+.card-holder {
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+.expirationDate {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    display: flex;
+    gap: 3px;
+    padding: 20px;
+}
+#month {
+    height: 20px;
+    width: 23px;
+}
+#year {
+    height: 20px;
+    width: 23px;
+}
+
+
+/* CSS for Back Card Overall */
+#cardback {
+    /* General CSS styling and placement inside form */
+    background-color: lightgray;
+    width: 360px;
+    height: 250px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+    border-radius: 10px;
+    /* CSS for inside cardback */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+}
+.black-stripe {
+    background-color: black;
+    width: 100px;
+    grid-column: -1;
+    grid-row: 2;
+    margin: 0;
+}
+.cvc-text {
+    grid-column: -1;
+    grid-row: 4;
+    padding: 5px;
+}
+.cvs-cvv {
+    grid-column: -1;
+    grid-row: 5;
+    height: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+button {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: start;
+    margin-top: 0;
+    background-color: beige;
+    margin: 10px;
+    height: 40px;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
