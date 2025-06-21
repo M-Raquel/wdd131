@@ -279,3 +279,9 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+//Display all of the information on the page
+// document.querySelector('#name').innerHTML = recipes[1].name;
+// document.querySelector('#name').innerHTML = recipes[1].description;
+// document.querySelector('#name').innerHTML = recipes[1].image;
+
