@@ -67,42 +67,95 @@ const hikes = [
   }
 ];
 
- const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
+//  const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
 
- function compareFn(a,b) {
-  if (a > b) {
-    return -1;
-  } else if (a < b) {
-    return 1;
-  }
- // a must be equal to b
- return 0;
-}
+// let lowerList = simpleList.map(function(fruit){
+//     return fruit.toLowerCase();
+// })
+// let simpleSort = lowerList.sort();
+// console.log(simpleSort);
 
-const anotherSort = simpleList.sort(compareFn);
-console.log(anotherSort);
-
-// Example to show how to filter results
-// function searchList(list, query ) {
-//     function searchCallback(string) {
-//         return string.toLowerCase().includes(query.toLowerCase());
-//     }
-//     return list.filter(searchCallback);
+//  function compareFn(a,b) {
+//   if (a > b) {
+//     return -1;
+//   } else if (a < b) {
+//     return 1;
+//   }
+//  // a must be equal to b
+//  return 0;
 // }
 
-// console.log(searchList(simpleList, "b"));
-// console.log(searchList(simpleList, "an"));
+// const anotherSort = simpleList.sort(compareFn);
+// console.log(anotherSort);
 
-// Filtering a list of objects
-function searchList(list, q ) {
-    function searchCallback(object) {
-        return (
-            object.name.toLowerCase().includes(q.toLowerCase()) ||
-            object.description.toLowerCase().includes(q.toLowerCase()) ||
-            object.tags.find((tag => tag.toLowerCase().includes(q.toLowerCase()))
-        ));
+
+// // Example to show how to filter results
+function search() {
+  // let query = "an"
+
+  // function searchList(item) {
+  //     return item.toLowerCase().includes(query.toLowerCase())
+  // };
+
+  // let filterList = simpleList.filter(searchList);
+  // console.log(filterList);
+
+  // LIKE HOMEWORK - filtering objects
+  let hikeQuery = document.querySelector('#search').value;
+
+  let filteredHikes = hikes.filter(function(hike){
+      return (hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) || 
+      hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+      hike.tags.find((tag) => tag.toLowerCase().includes(hikeQuery.toLowerCase())
+  ))
+  });
+
+  function compareHikes(a,b) {
+    if (a.name < b.name) {
+      return -1;
+    } else if (a.name > b.name) {
+      return 1;
     }
-    const filtered = list.filter(searchCallback);
+  // a must be equal to b
+  return 0;
+  }
+
+  let sortedHikes = filteredHikes.sort(compareHikes);
+
+  sortedHikes.forEach(function(hike){   renderHike(hike); })
+
+
+  console.log(sortedHikes);
 }
 
-console.log(searchList(hikes, "al"))
+const button = document.querySelector('button');
+button.addEventListener('click', search);
+
+let randomNum = Math.ceil(Math.random() * hikes.length);
+console.log(randomNum)
+
+//go through an array of tags to pull one and create a button for it.
+function tagTemplate(tags){
+  return tags.map((tag)=> `<button>${tag}</button>`).join(" ");
+}
+
+function hikesTemplate(hike) {
+  return `<div class="hike-card">
+            <div class="hike-content">
+            <h2>${hike.name}</h2>
+            <p>${hike.description}</p>
+            <div class="hike-tags">
+                ${tagTemplate(hike.tags)}
+            </div>
+            </div>
+          </div>`
+}
+
+function renderHike(hike) {
+  let hikeContainer = document.querySelector('#hike-container')
+  let html = hikesTemplate(hike); //hike from random number
+  hikeContainer.innerHTML += html;
+
+}
+
+renderHike(hikes[randomNum]);
