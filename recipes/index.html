@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://m-raquel.github.io/wdd131/recipes/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="recipes.css">
-    <script defer src="recipes.js"></script>
+    <script src="recipes.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,34 +23,16 @@
         </div>
 
         <div class="search-bar">
-            <input type="text" placeholder="Find a Recipe!">
+            <input id="search" type="text" placeholder="Find a Recipe!">
             <img class="searchlogo" src="images/search.svg" alt="Search logo">
         </div>
     </header>
     <main>
-        <div class=""></div>
-        <div class="recipe">
-            <img id="image" src="images/apple-crisp.jpg" alt="A picture of an Apple Crisp">
-            <div class="recipe-content">
-                <button id="tags">dessert</button>
-                <h2 id="name">Apple Crisp</h2>
-    
-                <span
-                    class="rating"
-                    role="img"
-                    aria-label="Rating: 4 out of 5 stars"
-                >
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p id="description">"This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream."</p>
-            </div>
+        <!-- Div to put random recipe in which will later be hidden. -->
+        <div id="random-recipe"></div> 
 
+        <div id="recipe-container">
         </div>
-
     </main>
     <footer>
         

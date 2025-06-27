@@ -280,8 +280,109 @@ const recipes = [
 	}
 ]
 
-//Display all of the information on the page
-// document.querySelector('#name').innerHTML = recipes[1].name;
-// document.querySelector('#name').innerHTML = recipes[1].description;
-// document.querySelector('#name').innerHTML = recipes[1].image;
+const random = getRandomListEntry(recipes);
+renderRecipe(random, '#random-recipe');
 
+function search() {
+	const recipeQuery = document.querySelector('#search').value;
+	//Clear the random recipe;
+	document.querySelector('#random-recipe').innerHTML = '';
+	document.querySelector('#recipe-container').innerHTML = ''
+	
+	//Filter Recipes
+	let filteredRecipes = recipes.filter(function(recipe){
+      return (recipe.name.toLowerCase().includes(recipeQuery.toLowerCase()) || 
+      recipe.description.toLowerCase().includes(recipeQuery.toLowerCase()) ||
+      recipe.tags.find((tag) => tag.toLowerCase().includes(recipeQuery.toLowerCase())
+  ))
+  });
+
+  function compareRecipes(a,b) {
+    if (a.name < b.name) {
+      return -1;
+    } else if (a.name > b.name) {
+      return 1;
+    }
+  // a must be equal to b
+  return 0;
+  }
+
+  let sortedRecipes = filteredRecipes.sort(compareRecipes);
+
+  //Clear the container before putting new results
+	
+  sortedRecipes.forEach(function(recipe){   renderRecipe(recipe, '#recipe-container'); })
+
+  console.log(sortedRecipes);
+}
+
+//Listen for the search button being pressed
+const button = document.querySelector('.searchlogo');
+button.addEventListener('click', search);
+
+const tagButton = document.querySelector('#tags');
+tagButton.addEventListener('click', search);
+
+
+function randomNumber(num){
+	return Math.floor(Math.random()* num) //will give a number 
+}
+
+function getRandomListEntry(list) {
+	const listLength = list.length;
+	const randomNum = randomNumber(listLength);
+	return list[randomNum];
+}
+
+console.log(getRandomListEntry(recipes));
+
+function recipeTemplate(recipe){
+		return `<div class="recipe">
+					<img id="image" src=${recipe.image} alt="A picture of a delicious recipe">
+					<div class="recipe-content">
+						${tagsTemplate(recipe.tags)}
+						<h2 id="name">${recipe.name}</h2>
+					
+						<p class="recipe_ratings">
+							${ratingTemplate(recipe.rating)}
+						</p>
+
+						<p id="description">${recipe.description}</p>
+					</div>
+				</div>`
+			}
+
+function tagsTemplate(tags){
+	return tags.map((tag)=> `<button id="tags">${tag}</button>`).join(" ");
+	}
+
+function ratingTemplate(rating){
+		let html = `<span
+						class="rating"
+						role="img"
+						aria-label="Rating: ${rating} out of 5 stars"
+					>`
+					for (let i = 1; i <= 5; i++) {
+						if (i <= rating) {
+							html += `<span aria-hidden="true" class="icon-star">⭐</span>`
+						} else {
+							html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`
+						}
+					}
+					html += `</span>`
+					return html;
+	}
+
+function renderRecipe(recipe, containerSelector = '.recipe-container') {
+  const recipeContainer = document.querySelector(containerSelector);
+  const html = recipeTemplate(recipe);
+  recipeContainer.innerHTML += html; // Overwrites instead of appending
+}
+
+function init() {
+	//get a random recipe
+	const recipe = getRandomListEntry(recipes)
+	//render the recipe
+	renderRecipe(recipe);
+}
+init();

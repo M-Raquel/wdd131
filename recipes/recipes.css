@@ -62,6 +62,9 @@ h2 {
     width: 50%;
     justify-self: center;
     margin: 0;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 /* Main */
