@@ -1,0 +1,28 @@
+.galaxy-map {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #0c0c30 0%, #000 100%);
+  overflow: hidden;
+}
+
+.planet {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 120px;
+  background-color: #4e5d94;
+  color: white;
+  font-weight: bold;
+}
+
+/* Planet positions */
+.center { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.lingua { top: 10%; left: 50%; transform: translateX(-50%); }
+.tome { top: 35%; left: 10%; }
+.terra { top: 35%; right: 10%; }
+.sonata { bottom: 30%; left: 10%; }
+.lab { bottom: 30%; right: 10%; }
+.about { bottom: 10%; left: 50%; transform: translateX(-50%); }
