@@ -1,0 +1,197 @@
+/* Css for Nebula Page project page */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --secondary-color: #1AC8ED; 
+  --primary-color: #22223B;
+  --accent1-color: #9D2F3C;
+  --accent2-color: #FBFFF1;
+  --accent3-color: #4A4E69;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Mulish", sans-serif;
+  --paragraph-font: "Space Mono", monospace;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(
+    --primary-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: white; /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --primary-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+}
+
+/* Header Specific */
+header {
+  background-color: #0c0c30;
+}
+.dropdown {
+    display: none;
+}
+.nav-links {
+    display: none;
+}
+.logo {
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* Main Specific */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.galaxy-map {
+  position: relative;
+  background: radial-gradient(ellipse at center, #0c0c30 0%, #000 100%);
+  overflow: hidden;
+}
+
+#personal-project {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  background-color: var(--paragraph-background-color);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#personal-project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer Specific */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #0c0c30;
+  text-align: center;
+  position: relative;
+}
+footer li {
+  list-style: none;
+  margin: 0 10px;
+  padding: 10px;
+}
+footer a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-family: var(--paragraph-font);
+}
+
+@media screen and (min-width: 800px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+  }
+  .dropdown {
+  margin: 20px;
+  position: relative;
+  justify-self: start;
+  justify-items: center;
+  display: flex;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 20px;
+  }
+  .dropbtn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;  /*Changes the cursor to the pointer finger*/
+    font-family: var(--paragraph-font);
+  }
+
+    /* Dropdown hover and focus */
+    .dropbtn:hover, .dropbtn:focus {
+    background-color: var(--accent1-color);
+    color: var(--nav-hover-link-color);
+    }
+
+    /* The Search Field */
+    #userInput {
+    box-sizing: border-box;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/149/149852.png');
+    background-size: 20px;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    }
+    /* The search field when it gets focus/clicked on*/
+    #userInput:focus {
+    outline: 3px solid var(--primary-color);
+    }
+
+    /* The container needed to position the dropdown content */
+
+    /* Dropdown Content - Hide by default */
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 230px;
+    overflow: auto; /* Enable scroll if needed */
+    border: 1px solid var(--secondary-color);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: var(--nav-hover-link-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--paragraph-font);
+    }
+
+    .dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--nav-hover-link-color);
+    }
+
+    /* Show the dropdown menu with Javascript. */
+    .show {
+    display: block;
+    }
+}

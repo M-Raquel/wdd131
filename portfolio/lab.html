@@ -1,0 +1,63 @@
+<!-- HTML for Nebula Lab page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raquel Miller">
+    <meta name="description" content="A history of personal projects">
+    <link rel="stylesheet" href="styles/lab.css">
+    <title>Personal Portfolio</title>
+    <script defer src="personal-portfolio.js"></script>
+  </head>
+ <body>
+    <header>
+        <div class="dropdown">
+            <button onclick="toggleDropDown()"
+            class="dropbtn">Explore
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Type Something" id="userInput" onkeyup="filterDropDown()">
+              <a href="index.html">Galaxy View</a>
+              <a href="about.html">About</a>
+              <a href="unfinishedpage.html">Luz</a>
+              <a href="unfinishedpage.html">Terra</a>
+              <a href="unfinishedpage.html">Tome</a>
+              <a href="unfinishedpage.html">Sonata</a>
+              <a href="lab.html">Nebula Lab</a>
+            </div>
+        </div>
+      <a href="index.html">
+        <img class="logo" src="images/short_personal_logo.png" alt="Website Logo">
+      </a>
+    </header>
+    <main class="galaxy-map">
+      <h1>Welcome to Nebula Labs</h1>
+      <p>Where experimental progress is made</p>
+
+      <article id="personal-project">
+        <div class="image-container">
+          <h2>Simon Says</h2>
+          <img class="project-image" src="images/Simon-Says.jpg" alt="Simon Says">
+        </div>
+        <div class="project-information">
+          <h4>Skills used in project</h4>
+          <p class="Tags">Written in C, Displayed on Arduino Uno</p>
+          <h4>Description of project</h4>
+          <p class="Description">December 2024. A final project that prompts the user to copy a pattern shown by the program. It goes until a mistake is made or a score of 15 is made.</p>
+          <h4>Worth</h4>
+          <p class="Impact">Learned how to cordinate hardware with software programming</p>
+        </div>
+        <hr>
+      </article>
+
+    </main>
+    <footer>
+        <ul>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/miller-raquel/">LinkedIn</a></li>
+      </ul>
+    </footer>
+ </body>
+ </html>
