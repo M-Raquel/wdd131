@@ -1,35 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raquel Miller">
+    <meta name="description" content="The portfolio of Raquel Miller">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="unfinishedpage.css">
+    <title>Personal Portfolio</title>
+    <script defer src="personal-portfolio.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logo" src="images/short_personal_logo.png" alt="Website Logo">
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="unfinishedpage.html">Luz</a>
+        <a href="unfinishedpage.html">Terra</a>
+        <a href="unfinishedpage.html">Tome</a>
+        <a href="unfinishedpage.html">Sonata</a>
+        <a href="lab.html">Nebula Lab</a>
+      </nav>
+    </header>
+
+    <main class="galaxy-map">
+      <h1>Avocation Galaxy</h1>
+      <p>Go visit a planet!</p>
+
+      <div class="dropdown">
+        <button onclick="toggleDropDown()"
+        class="dropbtn">Explore
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Type Something" id="userInput" onkeyup="filterDropDown()">
+          <a href="about.html">About</a>
+          <a href="unfinishedpage.html">Luz</a>
+          <a href="unfinishedpage.html">Terra</a>
+          <a href="unfinishedpage.html">Tome</a>
+          <a href="unfinishedpage.html">Sonata</a>
+          <a href="lab.html">Nebula Lab</a>
+        </div>
+      </div>
+      
+      <div class="planet-ring">
+        <div class="planet">
+          <a href="lab.html" class="nebula-lab">
+            <img src="images/3D-style_Nebula-removebg-preview.png" alt="Picure of Nebula Lab planet">
+          </a>
+          <h2>Nebula Lab</h2>
+          <p>Projects and Experimental coding space</p>
+        </div>
+        
+        <div class="planet">
+          <a href="about.html" class="about">
+            <img src="images/3D-style_About-removebg-preview.png" alt="Picture of About site">
+          </a>
+          <h2>Space Station</h2>
+          <p>Discover the "why" behind these planets</p>
+        </div>
+        
+
+        <div class="planet">
+          <a href="luz.html" class="luz">
+            <img src="images/3D-style_Luz-removebg-preview.png" alt="Picture of luz planet">
+          </a>
+          <h2>Luz</h2>
+          <p>A spiritual outlook to life</p>
+        </div>
+
+        <div class="planet">
+          <a href="terra.html" class="terra">
+            <img src="images/3D-style_Terra-removebg-preview.png" alt="Picture of Terra planet">
+          </a>
+          <h2>Terra</h2>
+          <p>Nature logs</p>
+        </div>
+
+        <div class="planet">
+          <a href="tome.html" class="tome">
+            <img src="images/3D-style_Tome-removebg-preview.png" alt="Picture of Tome planet">
+          </a>
+          <h2>Tome</h2>
+          <p>Reflective space for literature</p>
+        </div>
+
+        <div class="planet">
+          <a href="sonata.html" class="sonata">
+            <img src="images/3D-style_Sonata-removebg-preview.png" alt="Picture of Sonata planet">
+          </a>
+          <h2>Sonata</h2>
+          <p>A world of music</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/miller-raquel/">LinkedIn</a></li>
+      </ul>
+  </footer>
+  </body>
 </html>
-<header>
-  <h1>Raquel's Galaxy</h1>
-  <p>Explore the constellations of curiosity</p>
-</header>
-
-<main class="galaxy-map">
-  <nav class="planet-ring">
-    <a href="lingua.html" class="planet">Lingua</a>
-    <a href="terra.html" class="planet">Terra</a>
-    <a href="tome.html" class="planet">Tome</a>
-    <a href="sonata.html" class="planet">Sonata</a>
-    <a href="lab.html" class="planet">Nebula Lab</a>
-    <a href="about.html" class="planet">About</a>
-  </nav>
-</main>
-
-<footer>
-  <ul>
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Resume</a></li>
-  </ul>
-</footer>
