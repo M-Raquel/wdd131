@@ -5,7 +5,8 @@ const projects = [
       skills: "Written in C, Displayed on Arduino Uno",
       image: 'Simon-Says.jpg',
       alt: 'Simon Says image',
-      description: "December 2024.\n A final project that prompts the user to copy a pattern shown by the program. It goes until a mistake is made or a score of 15 is made.",
+      date: "December 2024",
+      description: "A final project that prompts the user to copy a pattern shown by the program. It goes until a mistake is made or a score of 15 is made.",
       impact: "Learned basic hardware implementation with software programming"
       
     },
@@ -13,14 +14,16 @@ const projects = [
         name: "Password Generator",
         skills: "Python, Tkinter",
         image: 'password_generator.png',
-        description: "December 2024.\n A final project that randomly generates a password with various characters and length based on user choice.",
+        date: "December 2024",
+        description: "A final project that randomly generates a password with various characters and length based on user choice.",
         impact: "Learned how to use functions in python.",
     },
     {
         name: "BluePrint Life Site",
         skills: "HTML, CSS, Javascript",
         image: "BluePrintLife_Site.png",
-        description: "December 2022.\n Link: https://m-raquel.github.io/wdd130/personal_planner/index.html \n A webiste designed to help people plan there lives. Inclued a Journal section, weekly/monthly calander, and checklist site",
+        date: "December 2022",
+        description: "Link: https://m-raquel.github.io/wdd130/personal_planner/index.html \n A webiste designed to help people plan there lives. Inclued a Journal section, weekly/monthly calander, and checklist site",
         impact: "Learned the basics of how to create a static website.",
     }
 ];
@@ -37,6 +40,7 @@ projects.forEach(function(project) {
         <img class="project-image" src="images/${project.image}" alt="${project.alt}">
     </div>
     <div class="project-information">
+        <h3>${project.date}</h3>
         <h4>Skills used in project</h4>
         <p>${project.skills}</p>
         <h4>Description of project</h4>
