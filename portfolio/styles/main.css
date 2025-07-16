@@ -109,13 +109,14 @@ p {
 .dropdown {
   margin: 20px;
   position: relative;
-  justify-self: center;;
+  justify-self: center;
 }
 
 /* Dropdown Content - Hide by default */
 .dropdown-content {
   display: none;
   position: absolute;
+  transform: translate(-30%);
   background-color: var(--primary-color);
   min-width: 230px;
   overflow: auto; /* Enable scroll if needed */
