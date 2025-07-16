@@ -28,35 +28,53 @@ const projects = [
     }
 ];
 
+// Search filter and Object Render for Nebula Lab site 
 const container = document.getElementById('project-container');
 
-projects.forEach(function(project) {
-    let showcase = document.createElement('article');
-	showcase.setAttribute('id', 'personal-project');
+function renderProjects(filteredProjects) {
+  container.innerHTML = ''; // Clear previous projects
 
-    let html =  `
-    <div class="image-container">
-        <h2>${project.name}</h2>
-        <img class="project-image" src="images/${project.image}" alt="${project.alt}">
-    </div>
-    <div class="project-information">
-        <h3>${project.date}</h3>
-        <h4>Skills used in project</h4>
-        <p>${project.skills}</p>
-        <h4>Description of project</h4>
-        <p class="Description">${project.description}</p>
-        <h4>Worth</h4>
-        <p class="Impact">${project.impact}</p>
-        </div>`
+  filteredProjects.forEach(function(project) {
+    let showcase = document.createElement('article');
+    showcase.setAttribute('id', 'personal-project');
+
+    let html = `
+      <div class="image-container">
+          <h2>${project.name}</h2>
+          <img class="project-image" src="images/${project.image}" alt="${project.alt}">
+      </div>
+      <div class="project-information">
+          <h3>${project.date}</h3>
+          <h4>Skills used in project</h4>
+          <p>${project.skills}</p>
+          <h4>Description of project</h4>
+          <p class="Description">${project.description}</p>
+          <h4>Worth</h4>
+          <p class="Impact">${project.impact}</p>
+      </div>
+    `;
 
     showcase.innerHTML = html;
-	container.appendChild(showcase);
+    container.appendChild(showcase);
+  });
+}
+
+// Initial render
+renderProjects(projects);
+
+document.getElementById('search-bar').addEventListener('input', function(e) {
+  const keyword = e.target.value.toLowerCase();
+
+  const filtered = projects.filter(project =>
+    project.name.toLowerCase().includes(keyword) ||
+    project.skills.toLowerCase().includes(keyword) ||
+    project.description.toLowerCase().includes(keyword)
+  );
+
+  renderProjects(filtered);
 });
 
-console.log(projects);
-
 // Javascript for Dropdown Button 
-
 // When the user clicks on the butotn, toggle between hiding and showing
 // the content
 function toggleDropDown() {
@@ -78,3 +96,4 @@ function filterDropDown() {
         }
     }
 }
+
