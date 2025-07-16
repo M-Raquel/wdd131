@@ -28,19 +28,29 @@
   --nav-hover-link-color: white;
   --nav-hover-background-color: var(--primary-color);
 }
+
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0;
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-color);
 }
-
+h1, h2, h3, h4  {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+}
 /* Header Specific */
 header {
   background-color: #0c0c30;
   position: relative;
   z-index: 1;
   overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 .dropdown {
     display: none;
@@ -61,14 +71,14 @@ header {
     font-family: var(--paragraph-font);
   }
 
-    /* Dropdown hover and focus */
-    .dropbtn:hover, .dropbtn:focus {
+/* Dropdown hover and focus */
+.dropbtn:hover, .dropbtn:focus {
     background-color: var(--accent1-color);
     color: var(--nav-hover-link-color);
     }
 
-    /* The Search Field */
-    #userInput {
+/* The Search Field */
+#userInput {
     box-sizing: border-box;
     background-image: url('https://cdn-icons-png.flaticon.com/512/149/149852.png');
     background-size: 20px;
@@ -80,14 +90,14 @@ header {
     border-radius: 10px;
     }
     /* The search field when it gets focus/clicked on*/
-    #userInput:focus {
+#userInput:focus {
     outline: 3px solid var(--primary-color);
     }
 
-    /* The container needed to position the dropdown content */
+/* The container needed to position the dropdown content */
 
-    /* Dropdown Content - Hide by default */
-    .dropdown-content {
+/* Dropdown Content - Hide by default */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--primary-color);
@@ -97,8 +107,8 @@ header {
     z-index: 1;
     }
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
+/* Links inside the dropdown */
+ .dropdown-content a {
     color: var(--nav-hover-link-color);
     padding: 12px 16px;
     text-decoration: none;
@@ -106,13 +116,13 @@ header {
     font-family: var(--paragraph-font);
     }
 
-    .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: var(--secondary-color);
     color: var(--nav-hover-link-color);
     }
 
-    /* Show the dropdown menu with Javascript. */
-    .show {
+/* Show the dropdown menu with Javascript. */
+.show {
     display: block;
     }
 
@@ -123,6 +133,18 @@ header {
     width: 100px;
     border-radius: 50%;
     margin: 10px;
+}
+
+#search-bar {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--accent3-color);
+  margin-bottom: 20px;
+  font-family: var(--paragraph-font);
+  font-size: 12px;
+  text-align: center;
 }
 
 /* Main Specific */
@@ -138,9 +160,11 @@ main {
   background: radial-gradient(ellipse at center, #0c0c30 0%, #000 100%);
   overflow: hidden;
 }
-#project-container {
+
+.project-container {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 #personal-project {
   display: grid;
@@ -178,7 +202,12 @@ footer a {
 }
 
 @media screen and (min-width: 800px) {
-  #project-container{
+  #search-bar {
+    width: 250px;
+    max-width: 100%;
+    padding: 10px;
+  }
+  .project-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -208,7 +237,6 @@ footer a {
     gap: 20px;
   }
   .logo {
-    transform: translateX(-50%);
     width: 120px;
   }
 
@@ -226,7 +254,8 @@ footer a {
   
   header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
   }
 }
