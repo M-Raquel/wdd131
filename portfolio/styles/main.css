@@ -214,6 +214,11 @@ footer a {
       padding: 20px;
       font-weight: 400;
     }
+    .nav-links a:hover {
+      color: var(--nav-hover-link-color);
+      background-color: var(--accent1-color);
+      border-radius: 10px;
+    }
     .logo {
       width: 150px;
       margin: 20px;
